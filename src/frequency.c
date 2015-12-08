@@ -194,18 +194,11 @@ int saveWave(char* filename)
 		//impulse response - echo
 		int IRSize = 12;
 		float IR[IRSize];
-		IR[0] = 1.0;
-		IR[1] = 1.0;
-		IR[2] = 0.0;
-		IR[3] = 1.0;
-		IR[4] = 1.0;
-		IR[5] = 0.5;
-		IR[6] = 1.0;
-		IR[7] = 0.5;
-		IR[8] = 0.5;
-		IR[9] = 0.5;
-		IR[10] = 2.0;
-		IR[11] = 1.0;
+		for(p = 0; p < IRSize; p++)
+		{
+			IR[p] = 0.7;
+		}
+		
 		
 		
 		//write the data
@@ -236,7 +229,12 @@ int saveWave(char* filename)
 				a[k] = b[k] = 0.0;
 				for (n = 0, nn = 0; n < IRSize; n++, nn += 2) {
 					a[k] += (newData[nn] * cos(omega * n * i));
+					
+				for (n = 0, nn = 0; n < IRSize; n++, nn += 2)
+				{
 					b[k] -= (newData[nn] * sin(omega * n * i));
+				}
+					
 					
 				}
 				i++;
