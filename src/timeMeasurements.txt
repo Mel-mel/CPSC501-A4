@@ -1,0 +1,13 @@
+After first code tuning: Unrolling
+Time:0.053630
+
+After second code tuning: Jamming
+Time:0.018601
+
+After third code tuning: Minimize array references
+Time:0.047397
+
+After fourth code tuning: Eliminate common subexpressions
+Time:0.018334
+
+
