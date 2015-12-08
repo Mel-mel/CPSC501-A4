@@ -1,3 +1,10 @@
+Melissa Ta, UCID 10110850
+
+For the Time domain program "main.c"
+Time:0.085108
+==============================================
+
+For the Algorithm Based Program "frequency.c"
 After first code tuning: Unrolling
 Time:0.053630
 
